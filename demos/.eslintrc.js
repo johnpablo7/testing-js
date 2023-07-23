@@ -22,5 +22,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
   },
-  rules: {},
+  rules: {
+    quotes: [1, "double"],
+  },
 };
