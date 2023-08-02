@@ -23,6 +23,6 @@ module.exports = {
     ecmaVersion: "latest",
   },
   rules: {
-    quotes: [1, "double"],
+    quotes: [2, "double"],
   },
 };
