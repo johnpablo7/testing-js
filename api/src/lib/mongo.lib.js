@@ -1,5 +1,5 @@
-const { MongoClient, ObjectId } = require('mongodb');
-const { config } = require('../config');
+const { MongoClient, ObjectId } = require("mongodb");
+const { config } = require("../config");
 
 const DB_NAME = config.dbName;
 const MONGO_URI = config.dbUrl;
@@ -40,9 +40,8 @@ class MongoLib {
 
   async update(collection, id, data) {
     const db = await this.connect();
-    await db
-      .collection(collection)
-      .updateOne({ _id: ObjectId(id) }, { $set: data }, { upsert: true });
+    // eslint-disable-next-line max-len
+    await db.collection(collection).updateOne({ _id: ObjectId(id) }, { $set: data }, { upsert: true });
     return this.get(collection, id);
   }
 

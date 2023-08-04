@@ -1,3 +1,5 @@
+/* eslint quotes: ["error", "double"] */
+
 module.exports = {
   env: {
     browser: true,
@@ -6,12 +8,11 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: [
-    'airbnb-base',
-  ],
+  extends: ["airbnb-base"],
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: "latest",
   },
   rules: {
+    quotes: [2, "double"],
   },
 };
