@@ -1,5 +1,4 @@
 name: API CI
-
 #on: [push]
 on:
   push:
@@ -26,11 +25,11 @@ jobs:
       - name: install
         shell: bash
         run: npm ci
-      - name: run unit-test
+      - name: run unit test
         shell: bash
         run: npm run test
 
-lint:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -39,14 +38,14 @@ lint:
         uses: actions/setup-node@v2
         with:
           node-version: 18
-          cache: 'npm'
+          cache: "npm"
           cache-dependency-path: ./api/package-lock.json
       - name: install
         shell: bash
         run: npm ci
       - name: run lint
         shell: bash
-        run: npm run lint:fix
+        run: npm run lint test
 
   e2e:
     runs-on: ubuntu-latest
