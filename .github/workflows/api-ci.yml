@@ -45,7 +45,7 @@ lint:
         run: npm ci
       - name: run lint
         shell: bash
-        run: npm run lint --fix
+        run: npm run lint --silent
 
   e2e:
     runs-on: ubuntu-latest
