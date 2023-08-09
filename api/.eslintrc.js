@@ -8,12 +8,24 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: ["airbnb-base"],
+  extends: "airbnb-base",
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: [".eslintrc.{js,cjs}"],
+      parserOptions: {
+        sourceType: "script",
+      },
+    },
+  ],
   parserOptions: {
     ecmaVersion: "latest",
   },
+
   rules: {
-    quotes: [2, "double"],
+    quotes: ["error", "double"],
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
   },
 };
