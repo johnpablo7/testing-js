@@ -2,6 +2,7 @@
 
 module.exports = {
   env: {
+    browser: true,
     commonjs: true,
     es2021: true,
     node: true,
@@ -24,5 +25,6 @@ module.exports = {
   },
   rules: {
     quotes: [2, "double"],
+    "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
   },
 };
