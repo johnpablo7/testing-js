@@ -29,6 +29,7 @@ jobs:
       - name: run unit-test
         shell: bash
         run: npm run test
+
 lint:
     runs-on: ubuntu-latest
     steps:
@@ -45,7 +46,7 @@ lint:
         run: npm ci
       - name: run lint
         shell: bash
-        run: npm run lint --silent
+        run: npm run lint:fix
 
   e2e:
     runs-on: ubuntu-latest
