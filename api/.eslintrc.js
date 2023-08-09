@@ -1,5 +1,3 @@
-/* eslint quotes: ["error", "double"] */
-
 module.exports = {
   env: {
     browser: true,
@@ -23,7 +21,6 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
   },
-
   rules: {
     quotes: ["error", "double"],
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
